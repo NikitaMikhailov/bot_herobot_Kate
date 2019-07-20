@@ -40,6 +40,12 @@ def mainfunc():
                         random_id=get_random_id(),
                         message="Я тут!"
                     )
+                if event.from_chat and event.obj.text=='/Kate ping':
+                    vk.messages.send(
+                        chat_id=event.chat_id,
+                        random_id=get_random_id(),
+                        message="I'm Ok"
+                    )
 
     except Exception as err:
         try:
