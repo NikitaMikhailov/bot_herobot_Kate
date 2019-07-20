@@ -40,7 +40,7 @@ def mainfunc():
                         random_id=get_random_id(),
                         message="Я тут!"
                     )
-                if event.from_chat and event.obj.text=='/Kate ping':
+                if event.from_chat and event.obj.text=='/Kate ping' and event.obj.from_id==195310233:
                     vk.messages.send(
                         chat_id=event.chat_id,
                         random_id=get_random_id(),
