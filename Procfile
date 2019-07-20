@@ -1,1 +1,1 @@
-web: python 3.7 bot_ls.py
+worker: python bot_Kate.py
