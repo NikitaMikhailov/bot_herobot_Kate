@@ -48,24 +48,10 @@ def mainfunc():
                     )
 
     except Exception as err:
-        try:
-            print(err,type(err))
-            if str(err.find("Errno 2"))!=-1:
-                vk.messages.send(
-                    user_id=195310233,
-                    random_id=get_random_id(),
-                    message='Возникла ошибка ' + str(err) + ' в главном цикле программы сообщений Катибота, цикл перезапущен\nНа сообщении пользователя: '+first_name+' '+last_name+'\nC текстом сообщения: '+event.obj.text
-                )
-            mainfunc()
-        except:
-            print(err)
-
-            vk.messages.send(
-                user_id=195310233,
-                random_id=get_random_id(),
-                message='Возникла ошибка ' + str(err) + ' в главном цикле программы сообщений Катибота, цикл перезапущен\nОшибка без участия пользователя.'
-            )
-            mainfunc()
-
-
+        vk.messages.send(
+            user_id=195310233,
+            random_id=get_random_id(),
+            message='Возникла ошибка ' + str(err) + ' в главном цикле bot_herobot_Kate'
+        )
+        mainfunc()
 mainfunc()
