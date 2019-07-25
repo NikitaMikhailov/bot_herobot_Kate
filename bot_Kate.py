@@ -48,10 +48,10 @@ def mainfunc():
                     )
 
     except Exception as err:
+        mainfunc()
         vk.messages.send(
             user_id=195310233,
             random_id=get_random_id(),
             message='Возникла ошибка ' + str(err) + ' в главном цикле bot_herobot_Kate'
         )
-        mainfunc()
 mainfunc()
