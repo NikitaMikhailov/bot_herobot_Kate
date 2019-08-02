@@ -2,6 +2,7 @@
 #!/bin/bash
 #!/bin/sh
 #!/bin/sh -
+
 from vk_api.utils import get_random_id
 from vk_api import VkUpload
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
@@ -31,7 +32,7 @@ def mainfunc():
 #195310233  51556033
 
                 slovar_Katya=["Ну Пееееть","Ну Пееетяяя"]
-                if event.from_chat and random.randint(0,4)==0 and event.obj.from_id==51556033 and len(event.obj.text.split(" "))>5:
+                if event.from_chat and random.randint(0,10)==0 and event.obj.from_id==51556033 and len(event.obj.text.split(" "))>5:
                     vk.messages.send(
                         chat_id=event.chat_id,
                         random_id=get_random_id(),
